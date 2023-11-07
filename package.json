@@ -6,12 +6,15 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "cusweb": "expo customize:web",
+    "resetCache": "expo start -c"
   },
   "dependencies": {
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "@react-navigation/stack": "^6.3.20",
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
@@ -21,12 +24,18 @@
     "react-native-reanimated": "~3.3.0",
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
-    "react-native-web": "~0.19.6"
+    "react-native-web": "~0.19.6",
+    "react-navigation": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@expo/webpack-config": "^19.0.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@types/": "react-navigation/drawer",
     "@types/react": "~18.2.14",
-    "typescript": "^5.1.3"
+    "@types/react-navigation": "^3.4.0",
+    "typescript": "^5.1.3",
+    "webpack-hot-middleware": "^2.25.4"
   },
   "private": true
 }

@@ -1,66 +1,58 @@
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createStackNavigator } from "@react-navigation/stack";
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import HomeScreen from "./src/screens/HomeScreen";
+import AboutScreen from "./src/screens/AboutScreen";
+import PortfolioScreen from "./src/screens/PortfolioScreen";
+import ContactScreen from "./src/screens/ContactScreen";
+import Header from "./src/header/Header";
+import { ScreenNames } from "./src/consts/HeaderConsts";
 
-function AboutScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>About Screen</Text>
-    </View>
-  );
-}
+// const NativeStack = createNativeStackNavigator();
+const Stack = createStackNavigator();
+// const Drawer = createDrawerNavigator();
 
-function PortfolioScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>About Screen</Text>
-    </View>
-  );
-}
-
-function ContactScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Contact Screen</Text>
-    </View>
-  );
-}
-const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
 // EXAMPLES:
 // navigation.navigate('Notifications')}
 // navigation.goBack()
+
 export default function App() {
+  const headerOptions = () => ({
+    headerTitle: () => <Header />,
+  });
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
-        <Drawer.Screen
-          name="Home"
+      <Stack.Navigator
+        screenOptions={({}) => ({
+          // headerShown: false,
+          // gestureEnabled: true,
+        })}
+      >
+        <Stack.Screen
+          name={ScreenNames.Home}
           component={HomeScreen}
-          // options={{ title: "overview" }}
+          options={headerOptions}
         />
-        <Drawer.Screen name="About" component={AboutScreen} />
-        <Drawer.Screen name="Portfolio" component={PortfolioScreen} />
-        <Drawer.Screen name="Contact" component={ContactScreen} />
-      </Drawer.Navigator>
+        <Stack.Screen
+          name={ScreenNames.About}
+          component={AboutScreen}
+          options={headerOptions}
+        />
+        <Stack.Screen
+          name={ScreenNames.Portfolio}
+          component={PortfolioScreen}
+          options={headerOptions}
+        />
+        <Stack.Screen
+          name={ScreenNames.Contact}
+          component={ContactScreen}
+          options={headerOptions}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const styles = StyleSheet.create({});
