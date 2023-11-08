@@ -1,12 +1,12 @@
 import Header from "./Header";
-
+import Home from "./screens/Home";
+import Stack from "@mui/material/Stack";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
-    </div>
+    <Stack>
+      <Header />
+      <Home />
+    </Stack>
   );
 }
 
