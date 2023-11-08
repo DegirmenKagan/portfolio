@@ -1,4 +1,3 @@
-import "./App.css";
 import {
   AppBar,
   Box,
@@ -15,7 +14,7 @@ const Header = () => {
 
   const gitAddress = "https://github.com/DegirmenKagan";
   return (
-    <AppBar className="navbar">
+    <AppBar className="navbar" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
