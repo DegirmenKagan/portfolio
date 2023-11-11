@@ -11,4 +11,5 @@ export var Constants = {
   //backgrounds
   homeBgLight: "assets/home_light.jpeg",
   aboutBgLight: "assets/about_light.jpeg",
+  portfolioBgLight: "assets/portfolio_light.jpeg",
 };

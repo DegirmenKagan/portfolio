@@ -39,7 +39,7 @@ Computer Engineering degree at Manisa Celal Bayar University.
         <Typography paragraph sx={{ p: 3 }}>
           {`
 Also we (Me and my friend from high school) have a youtube channel named "Filmiyorum"
-that we comment on movies/series which has more than 4.5k subscribers. I am voiceovering and
+that we comment on movies/series which has more than 7.5k subscribers. I am both voiceovering and
 editing our videos every week.)`}
         </Typography>
 
