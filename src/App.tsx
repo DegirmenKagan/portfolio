@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./header/Header";
 import Home from "./screens/Home";
 import Stack from "@mui/material/Stack";
 function App() {
