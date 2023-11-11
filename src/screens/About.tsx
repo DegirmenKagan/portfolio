@@ -3,16 +3,17 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import GithubIcon from "@mui/icons-material/GitHub";
-import "./Home.css";
-import background from "../assets/home_light.jpeg";
+import "./About.css";
+import background from "../assets/about_light.jpeg";
 import { Constants } from "../consts/Constants";
+import React from "react";
 
-const Home = () => {
+const About = () => {
   return (
     <Box
       component={"section"}
-      className="home"
-      id="Home"
+      className="about"
+      id="About"
       sx={{
         minHeight: "100vh",
         backgroundImage: `url(${background})`,
@@ -20,17 +21,30 @@ const Home = () => {
         backgroundSize: "cover",
       }}
     >
-      <Box className="home-content" marginInline={10} marginBlock={10}>
-        <Typography variant="h3">Hello, It's me,</Typography>
-        <Typography variant="h1">Kağan Değirmen</Typography>
-        <Typography variant="h3">
-          And I'm a <span>Frontend Developer</span>
-        </Typography>
+      <Box className="about-img" margin={10}>
+        <img
+          loading="lazy"
+          src={require("../assets/aboutme.png")}
+          alt="webDevIcon"
+          style={{ objectFit: "contain", borderRadius: 30 }}
+        />
+      </Box>
+      <Box className="about-content" marginInline={10} marginBlock={10}>
+        <Typography variant="h3">About me,</Typography>
         <Typography paragraph sx={{ p: 3 }}>
-          {`I enjoy working as Frontend. The idea of creating an aesthetic product
-          to customers is amazing. I aim to satisfy people with my products. I
-          spent more time with React Native, but now I’m interested in React.`}
+          {`My programming journey, which started at Çiğli Science High School, (me and a friend of
+mine made a project that is a complex version of laser meter with Arduino. ) was crowned with my
+Computer Engineering degree at Manisa Celal Bayar University.
+`}
         </Typography>
+
+        <Typography paragraph sx={{ p: 3 }}>
+          {`
+Also we (Me and my friend from high school) have a youtube channel named "Filmiyorum"
+that we comment on movies/series which has more than 4.5k subscribers. I am voiceovering and
+editing our videos every week.)`}
+        </Typography>
+
         <Grid container className="social-media">
           <Grid item>
             <IconButton
@@ -57,28 +71,9 @@ const Home = () => {
             </IconButton>
           </Grid>
         </Grid>
-        <Button
-          variant="contained"
-          size="large"
-          startIcon={<ContactPageIcon />}
-          sx={{ marginTop: 5 }}
-          href={Constants.cv}
-          download={"KaganDegirmenResume.pdf"}
-        >
-          Download Resume
-        </Button>
-      </Box>
-
-      <Box className="home-img" margin={10}>
-        <img
-          loading="lazy"
-          src={require("../assets/webDev.png")}
-          alt="webDevIcon"
-          style={{ objectFit: "contain", borderRadius: 30 }}
-        />
       </Box>
     </Box>
   );
 };
 
-export default Home;
+export default About;
