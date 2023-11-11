@@ -3,7 +3,7 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import "./Home.css";
-import background from "../assets/home_light.jpg";
+import background from "../assets/home_light.jpeg";
 
 const Home = () => {
   return (
