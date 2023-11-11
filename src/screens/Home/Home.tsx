@@ -4,8 +4,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import GithubIcon from "@mui/icons-material/GitHub";
 import "./Home.css";
-import background from "../assets/home_light.jpeg";
-import { Constants } from "../consts/Constants";
+
+import { Constants } from "../../consts/Constants";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       id="Home"
       sx={{
         minHeight: "100vh",
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${Constants.homeBgLight})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
@@ -72,8 +72,8 @@ const Home = () => {
       <Box className="home-img" margin={10}>
         <img
           loading="lazy"
-          src={require("../assets/webDev.png")}
-          alt="webDevIcon"
+          src={Constants.homeIcon}
+          alt="homeIcon"
           style={{ objectFit: "contain", borderRadius: 30 }}
         />
       </Box>

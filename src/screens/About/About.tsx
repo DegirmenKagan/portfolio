@@ -1,12 +1,10 @@
-import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
-import ContactPageIcon from "@mui/icons-material/ContactPage";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import GithubIcon from "@mui/icons-material/GitHub";
 import "./About.css";
-import background from "../assets/about_light.jpeg";
-import { Constants } from "../consts/Constants";
-import React from "react";
+
+import { Constants } from "../../consts/Constants";
 
 const About = () => {
   return (
@@ -16,7 +14,7 @@ const About = () => {
       id="About"
       sx={{
         minHeight: "100vh",
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${Constants.aboutBgLight})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
@@ -24,8 +22,8 @@ const About = () => {
       <Box className="about-img" margin={10}>
         <img
           loading="lazy"
-          src={require("../assets/aboutme.png")}
-          alt="webDevIcon"
+          src={Constants.aboutIcon}
+          alt="aboutIcon"
           style={{ objectFit: "contain", borderRadius: 30 }}
         />
       </Box>
