@@ -25,10 +25,13 @@ const portfolio = () => {
       className="portfolio"
       id="Portfolio"
       sx={{
-        minHeight: "100vh",
+        height: "100vh",
         backgroundImage: `url(${Constants.portfolioBgLight})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        scrollSnapAlign: "center",
+        scrollSnapType: "y mandatory",
+        scrollBehavior: "smooth",
       }}
     >
       <Grid justifyContent={"center"}>

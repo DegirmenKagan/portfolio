@@ -13,10 +13,13 @@ const About = () => {
       className="about"
       id="About"
       sx={{
-        minHeight: "100vh",
+        height: "100vh",
         backgroundImage: `url(${Constants.aboutBgLight})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        scrollSnapAlign: "center",
+        scrollSnapType: "y mandatory",
+        scrollBehavior: "smooth",
       }}
     >
       <Box className="about-img" margin={10}>

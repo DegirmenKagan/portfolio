@@ -14,10 +14,13 @@ const Home = () => {
       className="home"
       id="Home"
       sx={{
-        minHeight: "100vh",
+        height: "100vh",
         backgroundImage: `url(${Constants.homeBgLight})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        scrollSnapAlign: "center",
+        scrollSnapType: "y mandatory",
+        scrollBehavior: "smooth",
       }}
     >
       <Box className="home-content" marginInline={10} marginBlock={10}>
